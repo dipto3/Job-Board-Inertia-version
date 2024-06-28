@@ -33,14 +33,14 @@ use App\Http\Controllers\SslCommerzPaymentController;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
+// Route::get('/', function () {
+//     return Inertia::render('Welcome', [
+//         'canLogin' => Route::has('login'),
+//         'canRegister' => Route::has('register'),
+//         'laravelVersion' => Application::VERSION,
+//         'phpVersion' => PHP_VERSION,
+//     ]);
+// });
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
@@ -51,6 +51,12 @@ Route::get('/dashboard', function () {
 //     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
 //     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 // });
+
+//Frontend Routes...
+Route::get('/', [HomeController::class, 'home'])->name('home');
+Route::get('/contact-us', [HomeController::class, 'contact'])->name('contact');
+Route::get('/search', [HomeController::class, 'search'])->name('search.job');
+Route::post('/subscriber', [SubscriberController::class, 'store'])->name('subscriber.store');
 //Admin auth
 Route::get('/backend-login', [AdminAuthController::class, 'loginPage'])->name('login.page');
 Route::post('/admin/login-check', [AdminAuthController::class, 'login'])->name('admin.login.check');
