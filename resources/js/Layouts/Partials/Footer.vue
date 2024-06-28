@@ -115,13 +115,13 @@
         </div>
     </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"
+<!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"
     integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> --}}
+{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> --}} -->
 
 <!-- Toastr JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-<script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script> -->
+<!-- <script>
     $(document).ready(function() {
         $('#subs').submit(function(e) {
 
@@ -147,12 +147,14 @@
 
         });
     });
-</script>
-<script setup>
-    
-</script>
+</script> -->
 
-<style lang="scss" scoped>
+
+</template>
+
+<script setup>
+   
+</script>
+<style>
 
 </style>
-</template>
