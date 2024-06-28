@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Services\HomeService;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class HomeController extends Controller
 {
@@ -18,7 +19,9 @@ class HomeController extends Controller
     public function home()
     {
         $data = $this->homeService->homeFeed();
-        return view('frontend.home', $data);
+        // return view('frontend.home', $data);
+        return Inertia::render('Frontend/Home',
+        ['data' =>$data]);
     }
 
     public function contact()
