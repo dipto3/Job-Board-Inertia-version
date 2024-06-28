@@ -9,11 +9,13 @@ class DatabaseSeeder extends Seeder
 {
     /**
      * Seed the application's database.
-     *
-     * @return void
      */
-    public function run()
+    public function run(): void
     {
+        $this->call(PackageSeeder::class);
+        $this->call(RoleAndPermissionseeder::class);
+        $this->call(AdminSeeder::class);
+        $this->call(JobCategorySeeder::class);
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
